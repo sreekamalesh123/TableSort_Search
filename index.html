@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Table Sort & Search</title>
+    <script type = "text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script type = "text/javascript" src = "./js/datatables.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class = "container">
+    <div class = "row">
+        <div class = "col-lg-4"></div>
+        <div class = "col-lg-8">
+            <h3>You can sort it by clicking on First name and last name</h3>
+        </div>
+    </div>
+</div>
+<div class = "container">
+    <div class = "row">
+        <div class = "col-lg-4">
+            <input type="text" placeholder="Search for Name..." id="searchInTable">
+
+        </div>
+        <div class = "col-lg-8">
+            <table id="table" class="table table-bordered table-hover" >
+                <thead>
+                <tr class = "tableRow">
+                    <th onclick="sort_FirstName();">Firstname</th>
+                    <th onclick="sort_LastName();">Lastname</th>
+                    <th>Email</th>
+                </tr>
+                </thead>
+                <tbody class = "tableBody">
+                <tr>
+                    <td>Sharath</td>
+                    <td>Bathini</td>
+                    <td>sharathbathini@abc.com</td>
+                </tr>
+                <tr>
+                    <td>Steve</td>
+                    <td>Jobs</td>
+                    <td>stevejobs@abc.com</td>
+                </tr>
+                <tr>
+                    <td>Bob</td>
+                    <td>Smith</td>
+                    <td>bobsmith@abc.com</td>
+                </tr>
+                </tbody>
+            </table>
+            <input type="hidden" id="orderingFN" value="ascen">
+            <input type="hidden" id="orderingLN" value="ascen">
+        </div>
+    </div>
+</div>
+</body>
+</html>
